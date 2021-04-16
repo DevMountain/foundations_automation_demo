@@ -4,8 +4,7 @@ const chromedriver = require('chromedriver')
 
 const driver = new Builder().withCapabilities(Capabilities.chrome()).build()
 
-import {empInfo} from '../src/employeeInfo'
-import {empVerify} from '../src/empVerify'
+import { empVerify } from '../src/empVerify'
 
 beforeEach(async () => {
     await (await driver).get('http://localhost:3000/')
@@ -15,5 +14,6 @@ afterAll(async () => {
 })
 
 test('Verify Each Employee', async () => {
+    // Now we want to use that empVerify function that we wrote in another file
     await empVerify(driver, 1)
 })

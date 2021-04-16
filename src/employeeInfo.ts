@@ -1,3 +1,5 @@
+// This is an array of objects that contain the employee's name, phone and title
+// from Employee Manager
 export const empInfo = [
     {
         name: 'Bernice Ortiz',
